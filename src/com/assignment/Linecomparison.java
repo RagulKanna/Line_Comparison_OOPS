@@ -58,12 +58,27 @@ public class Linecomparison {
             System.out.println("The endpoint of 1st line is not equal to endpoint of 2nd line");
     }
 
+    public void usecompareTo()
+    {
+        System.out.println("\n\nCheck the equality of line:");
+        Double line1=new Double(flength);
+        Double line2=new Double(slength);
+        int equal=line1.compareTo(line2);
+        if(equal>0.0)
+            System.out.println("The endpoint of 1st line is greater than endpoint of 2nd line");
+        else if(equal<0.0)
+            System.out.println("The endpoint of 1st line is lesser than endpoint of 2nd line");
+        else
+            System.out.println("The endpoint of 1st line is equal to endpoint of 2nd line");
+    }
+
     public static void main(String[] args) {
         System.out.println("\n   Welcome to Line Comparison Computation Program");
 
         Linecomparison line= new Linecomparison();
         line.getinputcalculatelength();
         line.checkequalityofline();
+        line.usecompareTo();
     }
 
 }
